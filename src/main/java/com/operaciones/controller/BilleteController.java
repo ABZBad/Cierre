@@ -23,12 +23,13 @@ public class BilleteController {
 
 	@Autowired
 	BilleteService BilleteService; 
-	/*obtener todas las monedas*/
+	/*obtener todos los billetes*/
 	@RequestMapping("/lista")
 	public ResponseEntity<List<BilleteModel>> lista(){
 		List<BilleteModel> lista = BilleteService.lista();
 		return new ResponseEntity(lista, HttpStatus.OK);
 	}
+	
 	@GetMapping("/verid/{id_billete}")
 	public ResponseEntity<BilleteModel> verId(@PathVariable("id_billete") Long id_billete){ 
 	Optional<BilleteModel> billete = BilleteService.buscarPorId(id_billete);

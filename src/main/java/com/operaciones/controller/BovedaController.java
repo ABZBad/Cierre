@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.operaciones.service.BovedaService;
 import com.operaciones.model.BovedaModel;
 
-
 @RestController
 @RequestMapping("/bovedas")
 public class BovedaController {
@@ -47,7 +46,4 @@ public class BovedaController {
 		return new ResponseEntity("Boveda Actualizada",HttpStatus.CREATED);
 	}
 	
-	
-	
-
 }
